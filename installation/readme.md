@@ -63,7 +63,7 @@ add options noatime,compress=zstd,subvol=@
 ### install the base system + ...
 
 # console
-dpkg-reconfigure console setup
+dpkg-reconfigure console-setup
 # zram + timeshift
 
 sudo apt install zram-tools micro timeshift -y
