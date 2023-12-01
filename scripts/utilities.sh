@@ -2,7 +2,7 @@
 
 ### Applications & tools
 sudo apt install -y \
-    thunar firefox xfce4-power-manager network-manager-gnome pavucontrol\
+    thunar firefox-esr xfce4-power-manager network-manager-gnome pavucontrol\
     htop neofetch
 # file manager: thunar
 # process manager: htop
