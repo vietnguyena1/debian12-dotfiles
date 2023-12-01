@@ -99,7 +99,7 @@ sudo systemctl enable bluetooth
 sudo systemctl enable ly.service
 
 ### utilities
-source ../script/utilities.sh
+source ~/debian12-dotfiles/script/utilities.sh
 
 ### finalize
 sudo apt autoremove
