@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x -e
 ###
 sudo apt -y update
 sudo apt -y upgrade
@@ -101,7 +101,10 @@ sudo systemctl enable ly.service
 ### utilities
 source ./script/utilities.sh
 
-### reboot
+### finalize
 sudo apt autoremove
+
+set +x +e
+
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
 # sudo reboot
