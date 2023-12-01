@@ -46,7 +46,8 @@ sudo apt install -y bluez blueman
 ### text editor
 sudo apt install -y micro
 
-
+### create folders
+xdg-user-dirs-update
 
 ### Ly Console Manager
 sudo apt install -y libpam0g-dev libxcb-xkb-dev
@@ -56,21 +57,6 @@ cd ly
 make
 sudo make install installsystemd
 cd
-
-### suckless
-# Creating directories
-mkdir ~/.config/suckless
-
-sudo apt install -y libx11-dev
-
-# Move install directory, make, and install
-cd ~/.config/suckless
-tools=( "dwm" "dmenu" "st" "slstatus" "slock" "tabbed" )
-for tool in ${tools[@]}
-do 
-	git clone git://git.suckless.org/$tool
-	cd ~/.config/suckless/$tool;make;sudo make clean install;cd ..
-done
 
 # XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
@@ -89,6 +75,20 @@ EOF
 sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
 
 
+### suckless
+# Creating directories
+mkdir ~/.config/suckless
+
+sudo apt install -y libx11-dev
+
+# Move install directory, make, and install
+cd ~/.config/suckless
+tools=( "dwm" "dmenu" "st" "slstatus" "slock" "tabbed" )
+for tool in ${tools[@]}
+do 
+	git clone git://git.suckless.org/$tool
+	cd ~/.config/suckless/$tool;make;sudo make clean install;cd ..
+done
 
 
 
