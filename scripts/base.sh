@@ -8,7 +8,7 @@ sudo apt -y upgrade
 sudo apt install -y git
 
 ### display
-sudo apt install -y xorg xorg-dev xbacklight xbindkeys xvkdb xinput 
+sudo apt install -y xorg xorg-dev xbacklight xbindkeys xvkbd xinput 
 # screen brightness: xbacklight
 # virtual keyboard: xvkdb
 # input devices: xinput
