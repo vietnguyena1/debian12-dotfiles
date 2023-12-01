@@ -103,4 +103,5 @@ source ./script/utilities.sh
 
 ### reboot
 sudo apt autoremove
-sudo reboot
+printf "\e[1;32mDone! you can now reboot.\e[0m\n"
+# sudo reboot
